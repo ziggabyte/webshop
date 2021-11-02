@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { CartProvider } from 'react-use-cart';
 import React, { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -10,7 +11,11 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         }
     }, []);
 
-    return <Component { ...pageProps } />;
+    return (
+        <CartProvider>
+            <Component { ...pageProps } />
+        </CartProvider>
+    );
 }
 
 export default MyApp;

@@ -1,10 +1,17 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { Product } from '../../utils/types';
+import { useCart } from 'react-use-cart';
 import { Button, Grid, Link, List, ListItem, Typography } from '@material-ui/core';
 
 const ProductInfo = ({ product }: { product: Product }): JSX.Element => {
     const { title, image, description, price, rating } = product;
+    const { addItem } = useCart();
+
+    const addToCartHandler = () => {
+        addItem(product, 1);
+    };
+
     return (
         <>
             <NextLink href="/" passHref>
@@ -37,7 +44,7 @@ const ProductInfo = ({ product }: { product: Product }): JSX.Element => {
                             <Typography variant="h5">${ price }</Typography>
                         </ListItem>
                         <ListItem>
-                            <Button color="primary">Add to cart</Button>
+                            <Button color="primary" onClick={ addToCartHandler }>Add to cart</Button>
                         </ListItem>
                     </List>
                 </Grid>
