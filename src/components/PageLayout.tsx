@@ -9,7 +9,7 @@ const PageLayout: FunctionComponent = ({ children }) => {
     const classes = useStyles();
 
     return (
-        <div className={ classes.body }>
+        <>
             <AppBar className={ classes.header } position="static">
                 <Toolbar>
                     <Typography component="h1" variant="h2">
@@ -17,7 +17,7 @@ const PageLayout: FunctionComponent = ({ children }) => {
                     </Typography>
                 </Toolbar>
             </AppBar>
-            <Container className={ classes.main }>
+            <Container>
                 <Box>
                     { children }
                 </Box>
@@ -39,7 +39,7 @@ const PageLayout: FunctionComponent = ({ children }) => {
                     </Link>
                 </NextLink>
             </footer>
-        </div>
+        </>
     );
 };
 

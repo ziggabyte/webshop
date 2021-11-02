@@ -14,11 +14,12 @@ const useStyles = makeStyles({
         height: '10vh',
         textAlign: 'center',
     },
+    gridContainer: {
+        paddingBottom: 10,
+        paddingTop: 10,
+    },
     header: {
         backgroundColor: 'gray',
-    },
-    main: {
-        height: '75vh',
     },
 });
 
