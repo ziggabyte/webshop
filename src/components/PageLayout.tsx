@@ -1,7 +1,8 @@
 import { FunctionComponent } from 'react';
 import NextLink from 'next/link';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Box, Container, Link, Toolbar, Typography } from '@material-ui/core';
 
-import { AppBar, Box, Container, Link, Toolbar, Typography } from '@material-ui/core';
 
 import useStyles from '../../utils/styles';
 
@@ -10,17 +11,22 @@ const PageLayout: FunctionComponent = ({ children }) => {
 
     return (
         <>
-            <AppBar className={ classes.header } position="static">
-                <Toolbar>
+            <Box className={ classes.header } position="sticky">
+                <Toolbar className={ classes.toolbar }>
                     <NextLink href="/" passHref>
-                        <Link color="textSecondary" underline="none">
+                        <Link color="textSecondary" title="Home" underline="none">
                             <Typography component="h1" variant="h2">
                                 MY WEBSHOP
                             </Typography>
                         </Link>
                     </NextLink>
+                    <NextLink href="/cart" passHref>
+                        <Link color="textSecondary" title="Cart" underline="none">
+                            <ShoppingCartIcon fontSize="large" />
+                        </Link>
+                    </NextLink>
                 </Toolbar>
-            </AppBar>
+            </Box>
             <Container>
                 <Box>
                     { children }
@@ -28,21 +34,21 @@ const PageLayout: FunctionComponent = ({ children }) => {
             </Container>
             <Box className={ classes.footer }>
                 <NextLink href="/" passHref>
-                    <Link color="textPrimary" underline="none">
+                    <Link color="textPrimary" title="About us" underline="none">
                         <Typography className={ classes.paddedLink }>
                             About us
                         </Typography>
                     </Link>
                 </NextLink>
                 <NextLink href="/" passHref>
-                    <Link color="textPrimary" underline="none">
+                    <Link color="textPrimary" title="Privacy policy" underline="none">
                         <Typography className={ classes.paddedLink }>
                             Privacy policy
                         </Typography>
                     </Link>
                 </NextLink>
                 <NextLink href="/" passHref>
-                    <Link color="textPrimary" underline="none">
+                    <Link color="textPrimary" title="Contact" underline="none">
                         <Typography className={ classes.paddedLink }>
                             Contact
                         </Typography>
