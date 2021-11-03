@@ -26,23 +26,29 @@ const PageLayout: FunctionComponent = ({ children }) => {
                     { children }
                 </Box>
             </Container>
-            <footer className={ classes.footer }>
+            <Box className={ classes.footer }>
                 <NextLink href="/" passHref>
-                    <Link underline="none">
-                        About us
+                    <Link color="textPrimary" underline="none">
+                        <Typography className={ classes.paddedLink }>
+                            About us
+                        </Typography>
                     </Link>
                 </NextLink>
                 <NextLink href="/" passHref>
-                    <Link underline="none">
-                        Privacy policy
+                    <Link color="textPrimary" underline="none">
+                        <Typography className={ classes.paddedLink }>
+                            Privacy policy
+                        </Typography>
                     </Link>
                 </NextLink>
                 <NextLink href="/" passHref>
-                    <Link underline="none">
-                        Contact
+                    <Link color="textPrimary" underline="none">
+                        <Typography className={ classes.paddedLink }>
+                            Contact
+                        </Typography>
                     </Link>
                 </NextLink>
-            </footer>
+            </Box>
         </>
     );
 };

@@ -9,10 +9,13 @@ const useStyles = makeStyles({
         width: '100%',
     },
     footer: {
+        alignItems: 'center',
         backgroundColor: 'gray',
-        color: 'white',
+        display: 'flex',
+        flexDirection: 'row',
         height: '10vh',
-        textAlign: 'center',
+        justifyContent: 'center',
+        padding: '5PX',
     },
     gridContainer: {
         paddingBottom: 10,
@@ -20,6 +23,9 @@ const useStyles = makeStyles({
     },
     header: {
         backgroundColor: 'gray',
+    },
+    paddedLink: {
+        padding: '10px',
     },
 });
 
