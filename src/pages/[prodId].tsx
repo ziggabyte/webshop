@@ -1,4 +1,3 @@
-import PageLayout from '../components/PageLayout';
 import { Product } from '../../utils/types';
 import ProductInfo from '../components/ProductInfo';
 import { useRouter } from 'next/dist/client/router';
@@ -30,11 +29,7 @@ const ProductInfoPage = () => {
         fetchProduct();
     });
 
-    return (
-        <PageLayout>
-            <ProductInfo product={ product }/>
-        </PageLayout>
-    );
+    return <ProductInfo product={ product }/>;
 };
 
 export default ProductInfoPage;

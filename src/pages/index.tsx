@@ -1,7 +1,6 @@
 import { Grid } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 
-import PageLayout from '../components/PageLayout';
 import { Product } from '../../utils/types';
 import ProductCard from '../components/ProductCard';
 import useStyles from '../../utils/styles';
@@ -21,11 +20,9 @@ export default function Home() {
     }, []);
 
     return (
-        <PageLayout>
-            <Grid className={ classes.gridContainer } container spacing={ 2 }>
-                { products.map((product) => (
-                    <ProductCard key={ product.id } product={ product } />)) }
-            </Grid>
-        </PageLayout>
+        <Grid className={ classes.gridContainer } container spacing={ 2 }>
+            { products.map((product) => (
+                <ProductCard key={ product.id } product={ product } />)) }
+        </Grid>
     );
 }

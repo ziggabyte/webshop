@@ -1,5 +1,4 @@
 import CartItem from '../components/CartItem';
-import PageLayout from '../components/PageLayout';
 import { Product } from '../../utils/types';
 import { useCart } from 'react-use-cart';
 import { Button, List, ListItem, ListItemText, Typography } from '@material-ui/core';
@@ -14,7 +13,7 @@ const Cart = () => {
     };
 
     return (
-        <PageLayout>
+        <>
             <Typography variant="h4">Cart</Typography>
             <List>
                 { products.map((product) => <CartItem key={ product.id } product={ product } />) }
@@ -24,7 +23,7 @@ const Cart = () => {
                 </ListItem>
             </List>
             <Button onClick={ clearCart }>Clear cart</Button>
-        </PageLayout>
+        </>
     );
 };
 
