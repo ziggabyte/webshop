@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     },
     footer: {
         alignItems: 'center',
-        backgroundColor: 'gray',
+        backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'row',
         height: '10vh',
@@ -22,10 +22,17 @@ const useStyles = makeStyles({
         paddingTop: 10,
     },
     header: {
-        backgroundColor: 'gray',
+        backgroundColor: 'white',
     },
     paddedLink: {
         padding: '10px',
+    },
+    toolbar: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingRight: '12rem',
     },
 });
 
