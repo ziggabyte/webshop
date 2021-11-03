@@ -12,7 +12,7 @@ const ProductCard = ({ product }: { product: Product}): JSX.Element => {
     };
 
     return (
-        <Grid item md={ 3 }>
+        <Grid item lg={ 3 } md={ 4 } sm={ 6 } xs={ 12 }>
             <Card>
                 <NextLink href={ `${ id }` } passHref>
                     <CardActionArea>
