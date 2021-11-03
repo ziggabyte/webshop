@@ -14,15 +14,21 @@ const Cart = () => {
 
     return (
         <>
-            <Typography variant="h4">Cart</Typography>
-            <List>
-                { products.map((product) => <CartItem key={ product.id } product={ product } />) }
-                <ListItem>
-                    <ListItemText primary="TOTAL" />
-                    <Typography>{ cartTotal }</Typography>
-                </ListItem>
-            </List>
-            <Button onClick={ clearCart }>Clear cart</Button>
+            { items.length === 0 ?
+                <Typography variant="h4">Cart is empty</Typography>
+                :
+                <>
+                    <Typography variant="h4">Cart</Typography>
+                    <List>
+                        { products.map((product) => <CartItem key={ product.id } product={ product } />) }
+                        <ListItem>
+                            <ListItemText primary="TOTAL" />
+                            <Typography>{ cartTotal }</Typography>
+                        </ListItem>
+                    </List>
+                    <Button onClick={ clearCart }>Clear cart</Button>
+                </>
+            }
         </>
     );
 };
