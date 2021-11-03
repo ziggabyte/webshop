@@ -12,9 +12,13 @@ const PageLayout: FunctionComponent = ({ children }) => {
         <>
             <AppBar className={ classes.header } position="static">
                 <Toolbar>
-                    <Typography component="h1" variant="h2">
-                        MY WEBSHOP
-                    </Typography>
+                    <NextLink href="/" passHref>
+                        <Link color="textSecondary" underline="none">
+                            <Typography component="h1" variant="h2">
+                                MY WEBSHOP
+                            </Typography>
+                        </Link>
+                    </NextLink>
                 </Toolbar>
             </AppBar>
             <Container>
