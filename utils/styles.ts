@@ -8,6 +8,18 @@ const useStyles = makeStyles({
         padding: 0,
         width: '100%',
     },
+    cartItem: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        height: '5rem',
+        justifyContent: 'space-between',
+        padding: 5,
+        width: 'inherit',
+    },
+    cartItemText: {
+        fontSize: 20,
+    },
     footer: {
         alignItems: 'center',
         backgroundColor: 'white',
@@ -15,7 +27,7 @@ const useStyles = makeStyles({
         flexDirection: 'row',
         height: '10vh',
         justifyContent: 'center',
-        padding: '5PX',
+        padding: '5px',
     },
     gridContainer: {
         paddingBottom: 10,
