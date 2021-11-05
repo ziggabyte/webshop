@@ -21,10 +21,8 @@ const PageLayout: FunctionComponent = ({ children }) => {
                     </NextLink>
                     <NextLink href="/cart" passHref>
                         <Link color="textSecondary" title="Cart" underline="none">
-                            <Box display="flex" flexDirection="row" justifyContent="space-between" width="7rem">
-                                <Typography variant="h5">Cart</Typography>
-                                <ShoppingCartIcon fontSize="large" />
-                            </Box>
+                            <Typography variant="h5">Cart</Typography>
+                            <ShoppingCartIcon fontSize="large" />
                         </Link>
                     </NextLink>
                 </Toolbar>
