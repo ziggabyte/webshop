@@ -45,13 +45,13 @@ const CartItem = ({ product }: { product: Product }): JSX.Element => {
                         <Button onClick={ decreaseQuantity }>
                             <RemoveIcon fontSize="small"/>
                         </Button>
-                        <ListItemText primary={ quantity } />
+                        <ListItemText primary={ quantity }/>
                         <Button onClick={ increaseQuantity }>
                             <AddIcon fontSize="small"/>
                         </Button>
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="flex-end" width="3rem">
-                        <ListItemText className={ classes.cartItemText } primary={ `$${item[0].itemTotal}` }/>
+                        <ListItemText className={ classes.cartItemText } primary={ `$${item[0].itemTotal?.toFixed(2)}` }/>
                     </Box>
                 </Box>
             </Box>

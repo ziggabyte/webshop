@@ -16,7 +16,7 @@ const OrderSummaryItem = ({ product }: { product: Product }): JSX.Element => {
         <ListItem className={ classes.listItem }>
             <ListItemText primary={ title } />
             <ListItemText primary={ quantity } />
-            <ListItemText primary={ `$${cartItem[0].itemTotal}` }/>
+            <ListItemText primary={ `$${cartItem[0].itemTotal?.toFixed(2)}` }/>
         </ListItem>
     );
 };

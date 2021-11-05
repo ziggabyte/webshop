@@ -20,7 +20,7 @@ const Cart = () => {
                     <Typography gutterBottom variant="h4">Cart is empty</Typography>
                     <NextLink href="/" passHref>
                         <Link underline="none">
-                            <Button>Continue shopping</Button>
+                            <Button variant="contained">Continue shopping</Button>
                         </Link>
                     </NextLink>
                 </>
@@ -37,13 +37,13 @@ const Cart = () => {
                     <Box display="flex" flexDirection="row" justifyContent="space-between">
                         <NextLink href="/" passHref>
                             <Link underline="none">
-                                <Button>Continue shopping</Button>
+                                <Button variant="contained">Continue shopping</Button>
                             </Link>
                         </NextLink>
-                        <Button onClick={ clearCart }>Clear cart</Button>
+                        <Button onClick={ clearCart } variant="contained">Clear cart</Button>
                         <NextLink href="/checkout" passHref>
                             <Link underline="none">
-                                <Button>Go to checkout</Button>
+                                <Button variant="contained">Go to checkout</Button>
                             </Link>
                         </NextLink>
                     </Box>

@@ -33,7 +33,7 @@ const OrderSummary = ({ handleBack, handleNext, orderData }: OrderSummaryProps):
                         </Box>
                         { products.map((product) => <OrderSummaryItem key={ product.id } product={ product } />) }
                         <Box display="flex" flexDirection="row" justifyContent="flex-end">
-                            <Typography>TOTAL: ${ cartTotal }</Typography>
+                            <Typography>TOTAL: ${ cartTotal.toFixed(2) }</Typography>
                         </Box>
                         <Button
                             onClick={ () => {

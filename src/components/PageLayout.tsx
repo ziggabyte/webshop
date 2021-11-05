@@ -3,7 +3,6 @@ import NextLink from 'next/link';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Box, Container, Link, Toolbar, Typography } from '@material-ui/core';
 
-
 import useStyles from '../../utils/styles';
 
 const PageLayout: FunctionComponent = ({ children }) => {
@@ -16,13 +15,16 @@ const PageLayout: FunctionComponent = ({ children }) => {
                     <NextLink href="/" passHref>
                         <Link color="textSecondary" title="Home" underline="none">
                             <Typography component="h1" variant="h2">
-                                MY WEBSHOP
+                                ZIGGIS WEBSHOP
                             </Typography>
                         </Link>
                     </NextLink>
                     <NextLink href="/cart" passHref>
                         <Link color="textSecondary" title="Cart" underline="none">
-                            <ShoppingCartIcon fontSize="large" />
+                            <Box display="flex" flexDirection="row" justifyContent="space-between" width="7rem">
+                                <Typography variant="h5">Cart</Typography>
+                                <ShoppingCartIcon fontSize="large" />
+                            </Box>
                         </Link>
                     </NextLink>
                 </Toolbar>

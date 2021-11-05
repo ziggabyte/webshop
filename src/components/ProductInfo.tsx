@@ -16,11 +16,11 @@ const ProductInfo = ({ product }: { product: Product }): JSX.Element => {
         <>
             <NextLink href="/" passHref>
                 <Link>
-                    <Button>Go back</Button>
+                    <Button variant="contained">Go back</Button>
                 </Link>
             </NextLink>
             <Grid alignItems="center" container spacing={ 5 }>
-                <Grid item md={ 4 } xs={ 12 }>
+                <Grid item md={ 6 } xs={ 12 }>
                     <Image
                         alt={ title }
                         height={ 200 }
@@ -29,7 +29,7 @@ const ProductInfo = ({ product }: { product: Product }): JSX.Element => {
                         width={ 150 }
                     />
                 </Grid>
-                <Grid item md={ 4 } xs={ 12 }>
+                <Grid item md={ 6 } xs={ 12 }>
                     <List>
                         <ListItem>
                             <Typography variant="h4">{ title }</Typography>
@@ -41,10 +41,10 @@ const ProductInfo = ({ product }: { product: Product }): JSX.Element => {
                             <Typography>{ rating.rate }/5 stars</Typography>
                         </ListItem>
                         <ListItem>
-                            <Typography variant="h5">${ price }</Typography>
+                            <Typography variant="h5">${ price.toFixed(2) }</Typography>
                         </ListItem>
                         <ListItem>
-                            <Button color="primary" onClick={ addToCartHandler }>Add to cart</Button>
+                            <Button color="primary" onClick={ addToCartHandler } variant="contained">Add to cart</Button>
                         </ListItem>
                     </List>
                 </Grid>
