@@ -8,13 +8,13 @@ const ProductInfoPage = () => {
     const path = router.asPath;
     const [product, setProduct] = useState<Product>({
         category: 'Loading',
-        description: 'Testing the test',
-        id: '34',
-        image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
-        price: 23345.54,
+        description: 'Item is loading',
+        id: '234',
+        image: 'https://i.pinimg.com/originals/10/b2/f6/10b2f6d95195994fca386842dae53bb2.png',
+        price: 0.0,
         rating: {
-            count: 34,
-            rate: 45,
+            count: 0,
+            rate: 0,
         },
         title: 'Loading',
     });

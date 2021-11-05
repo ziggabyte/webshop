@@ -1,6 +1,6 @@
 module.exports = {
 images: {
-    domains: ['fakestoreapi.com'],
+    domains: ['fakestoreapi.com', 'i.pinimg.com'],
   },
 reactStrictMode: true,
 }
