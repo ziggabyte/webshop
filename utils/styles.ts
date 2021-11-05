@@ -8,15 +8,6 @@ const useStyles = makeStyles({
         padding: 0,
         width: '100%',
     },
-    cartItem: {
-        alignItems: 'center',
-        display: 'flex',
-        flexDirection: 'row',
-        height: '5rem',
-        justifyContent: 'space-between',
-        padding: 5,
-        width: 'inherit',
-    },
     cartItemText: {
         fontSize: 20,
     },
@@ -35,6 +26,15 @@ const useStyles = makeStyles({
     },
     header: {
         backgroundColor: 'white',
+    },
+    listItem: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        height: '5rem',
+        justifyContent: 'space-between',
+        padding: 5,
+        width: '100%',
     },
     paddedLink: {
         padding: '10px',

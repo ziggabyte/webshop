@@ -1,7 +1,8 @@
 import NextLink from 'next/link';
-import { Product } from '../../utils/types';
 import { useCart } from 'react-use-cart';
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
+
+import { Product } from '../../utils/types';
 
 const ProductCard = ({ product }: { product: Product}): JSX.Element => {
     const { title, id, price, image } = product;

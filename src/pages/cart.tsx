@@ -17,7 +17,7 @@ const Cart = () => {
         <Container>
             { items.length === 0 ?
                 <>
-                    <Typography variant="h4">Cart is empty</Typography>
+                    <Typography gutterBottom variant="h4">Cart is empty</Typography>
                     <NextLink href="/" passHref>
                         <Link underline="none">
                             <Button>Continue shopping</Button>
@@ -26,7 +26,7 @@ const Cart = () => {
                 </>
                 :
                 <>
-                    <Typography variant="h4">Cart</Typography>
+                    <Typography gutterBottom variant="h4">Cart</Typography>
                     <List>
                         { products.map((product) => <CartItem key={ product.id } product={ product } />) }
                         <ListItem>

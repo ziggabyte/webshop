@@ -29,8 +29,7 @@ const CartItem = ({ product }: { product: Product }): JSX.Element => {
 
     return (
         <ListItem>
-            <Box className={ classes.cartItem }>
-
+            <Box className={ classes.listItem }>
                 <NextLink href={ `/${id}` } passHref>
                     <Link underline="none">
                         <Box display="flex" flexDirection="row">
