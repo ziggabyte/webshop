@@ -12,3 +12,14 @@ export interface Product {
     image: string;
     rating: ProductRating;
 }
+
+export interface Values {
+    address1: string;
+    address2?: string | undefined;
+    city: string;
+    country: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+    zipCode: string;
+}
