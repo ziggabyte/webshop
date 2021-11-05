@@ -17,13 +17,12 @@ const Checkout = () => {
         zipCode: '',
     });
     const [thisStep, setThisStep] = useState(0);
-    const { clearCartMetadata, emptyCart, items } = useCart();
+    const { clearCartMetadata, emptyCart } = useCart();
 
     const steps = ['Shipping address', 'Order summary'];
-    const handleOrder = (values: Values) => {
+    const handleOrder = () => {
         //Vad som händer med ordern
-        console.log(values);
-        console.log(items);
+        //använda values och items fr useCart()
     };
     const getContent = (step: number) => {
         return step === 0 ?
@@ -41,7 +40,7 @@ const Checkout = () => {
     const handleNext = (newValues: Values, lastStep = false) => {
         setOrderData((oldValues) => ({ ...oldValues, ...newValues }));
         if (lastStep) {
-            handleOrder(orderData);
+            handleOrder();
             emptyCart();
             clearCartMetadata();
         }
